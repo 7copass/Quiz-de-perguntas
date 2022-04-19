@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nação</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Nacionalidade: <input type="text" name="txtn" id="txtn"> 
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id="vrf">
+
+    </div>
+
+
+    <script>
+        function buscar(){
+            let txtv = document.querySelector('input#txtn');
+            let vrf = document.querySelector('div#vrf');
+            let n = (txtv.value);
+             
+            if (n == 'brasil'){
+                vrf.innerHTML += `Sua nacionalidade è <strong>${n}</strong> você é BRASILEIRO`
+            }else{
+                vrf.innerHTML +=`Você é <strong>ESTRANGEIRO</strong>`
+            }
+        
+       /* let txtv = document.querySelector('input#txtn');
+        let vrf = document.querySelector('div#vrf');
+        let n = (txtv.value);
+        vrf.innerHTML = `Qual o seu país?`  
+        if(n != 'Brasil'){
+            console.log('Você é Estrangeiro')
+        } else{
+            console.log('Você é Brasileiro!')
+        }*/
+        
+        
+    }
+    </script>
+</body>
+</html>
